@@ -1,0 +1,23 @@
+at first 
+import sqlite3
+
+1- connection = sqlite3.connect('name of ur database.db)
+2- cur = connection.cursor()
+3- cur. execute('create database-name (variable)')
+*variables like ('name','id','bluh bluh')
+4- cur.execute('insert into name-of-datastore-in-data-base (?,?)',("name","id","bluh bluh"))
+5- to remove:
+cur.execute('delete from data where bluh :=X',{'X': variable})
+6- to update
+cur.execute('update data set like-name="name-like" where id:= X'
+7- to select
+for row in cur.execute('select row-or-* from data where id = X'):
+print(row)
+8- cur.commit() to save
+9- cur.close() to close
+10*- remeber you can not open a data twice cause cant change data in two seperate shape.
+11- execute for one
+and 
+executemany for many inputs like a list
+cur.executemany('input into data values (?,?)',list)
+list = [(var1,var2),(...,...),(...,...),(....,...)]
